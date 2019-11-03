@@ -13,7 +13,7 @@ import java.util.Date;
  * @Version V1.0
  **/
 @Entity
-@Table(name = "ProductCategory")
+@Table(name = "product_category")
 @DynamicUpdate
 public class ProductCategory {
     //类目得ID
@@ -71,5 +71,16 @@ public class ProductCategory {
 
     public void setCategoryType(Integer categoryType) {
         this.categoryType = categoryType;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductCategory{" +
+                "categoryId=" + categoryId +
+                ", categoryName='" + categoryName + '\'' +
+                ", categoryType=" + categoryType +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                '}';
     }
 }
